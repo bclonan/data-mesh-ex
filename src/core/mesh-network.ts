@@ -19,7 +19,7 @@ export class MeshNetwork {
     return node;
   }
 
-  private broadcast(message: Message, sender: MeshNode): void {
+  private broadcast(message: Message, _sender: MeshNode): void {
     this.nodes.forEach((node, nodeId) => {
       if (nodeId !== message.senderId) {
         node.receive(message);

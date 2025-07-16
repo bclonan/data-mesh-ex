@@ -4,12 +4,10 @@ import type { Message } from '../types/mesh';
 
 export class DistributedWebDemo {
   private network: MeshNetwork;
-  private observer: MeshObserver;
   private messageLog: Message[] = [];
 
   constructor() {
     this.network = new MeshNetwork();
-    this.observer = new MeshObserver({ seed: 7, phaseResetInterval: 100 });
   }
 
   async runCollaborativeEditingDemo(): Promise<void> {
@@ -258,7 +256,7 @@ export class DistributedWebDemo {
     };
   }
 
-  private generateIoTSensorData(type: string, location: string): any {
+  private generateIoTSensorData(type: string, _location: string): any {
     const generators = {
       traffic: () => ({
         vehicleCount: Math.floor(Math.random() * 50),

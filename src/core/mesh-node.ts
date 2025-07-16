@@ -3,7 +3,7 @@ import { PatternGenerator } from './pattern';
 import type { NodeConfig, Message } from '../types/mesh';
 
 export class MeshNode {
-  private nodeId: string;
+  public nodeId: string;
   private pattern: PatternGenerator;
   private eventEmitter: EventEmitter;
   private globalStep: number;
