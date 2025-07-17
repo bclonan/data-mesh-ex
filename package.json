@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "A demonstration of a data mesh architecture using TypeScript and Vite.",
+  "author": "Bradley Clonan",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "test": "vitest",
