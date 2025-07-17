@@ -6,13 +6,9 @@ import type { Message } from './types/mesh';
 class WebDemo {
   private network: MeshNetwork;
   private observer: MeshObserver;
-  private monitor: PerformanceMonitor;
   private pattern: PatternGenerator;
-  private webDemo: DistributedWebDemo;
-  private monitoringDemo: RealtimeMonitoringDemo;
   private logContainer: HTMLElement;
   private nodeGrid: HTMLElement;
-  private statsGrid: HTMLElement;
   private patternViz: HTMLElement;
   private messageCount = 0;
   private currentStep = 0;
@@ -26,7 +22,6 @@ class WebDemo {
     
     this.logContainer = document.getElementById('logContainer')!;
     this.nodeGrid = document.getElementById('nodeGrid')!;
-    this.statsGrid = document.getElementById('statsGrid')!;
     this.patternViz = document.getElementById('patternViz')!;
     
     this.initializeEventListeners();
@@ -81,7 +76,6 @@ class WebDemo {
   }
 
   private updatePatternVisualization(): void {
-    const steps = 5;
     this.patternViz.innerHTML = '';
     
     for (let i = Math.max(0, this.currentStep - 2); i <= this.currentStep + 2; i++) {
