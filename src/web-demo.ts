@@ -22,10 +22,7 @@ class WebDemo {
   constructor() {
     this.network = new MeshNetwork();
     this.observer = new MeshObserver({ seed: 7, phaseResetInterval: 100 });
-    this.monitor = new PerformanceMonitor();
     this.pattern = new PatternGenerator(7, 100);
-    this.webDemo = new DistributedWebDemo();
-    this.monitoringDemo = new RealtimeMonitoringDemo();
     
     this.logContainer = document.getElementById('logContainer')!;
     this.nodeGrid = document.getElementById('nodeGrid')!;
