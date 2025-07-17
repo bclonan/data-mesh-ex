@@ -1,5 +1,4 @@
 import { MeshNetwork } from '../core/mesh-network';
-import { MeshObserver } from '../core/mesh-observer';
 import type { Message } from '../types/mesh';
 
 export class DistributedWebDemo {

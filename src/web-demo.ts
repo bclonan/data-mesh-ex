@@ -1,9 +1,6 @@
 import { MeshNetwork } from './core/mesh-network';
 import { MeshObserver } from './core/mesh-observer';
-import { PerformanceMonitor } from './utils/performance-monitor';
 import { PatternGenerator } from './core/pattern';
-import { DistributedWebDemo } from './examples/distributed-web-demo';
-import { RealtimeMonitoringDemo } from './examples/realtime-monitoring-demo';
 import type { Message } from './types/mesh';
 
 class WebDemo {
