@@ -87,7 +87,7 @@ class WebDemo {
   }
 
   private async delay(ms: number): Promise<void> {
-    return new Promise(resolve => globalThis.setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   private async runMeshDemo(): Promise<void> {
@@ -327,7 +327,7 @@ class WebDemo {
       this.messageCount++;
       this.currentStep++;
       
-      await this.delay(1200);
+      await this.delay(Math.random() * 2000 + 500); // Random delay
       this.updateNodeDisplay(randomServer, 'Online');
     }
 
