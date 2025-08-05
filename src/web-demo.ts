@@ -87,7 +87,7 @@ class WebDemo {
   }
 
   private async delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => globalThis.setTimeout(resolve, ms));
   }
 
   private async runMeshDemo(): Promise<void> {
